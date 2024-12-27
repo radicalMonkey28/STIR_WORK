@@ -10,7 +10,7 @@ def home():
 
 @app.route('/run-script', methods=["GET"])
 def run_script():
-    proxy_ip = "XXX.XXX.XXX.XXX"  # Replace with actual proxy IP
+    proxy_ip = "13.126.79.133"  # can replace with any proxyIP, i have used a random ip here for testing. 
     topics = fetch_trending_topics()
     result = store_in_mongodb(topics, proxy_ip)
     return jsonify(result)
